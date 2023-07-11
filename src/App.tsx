@@ -12,11 +12,11 @@ import Attraction from '../src/pages/Attraction';
 
 function App(){
 	return (
-		<BrowserRouter basename='/tourism'>
+		<BrowserRouter>
 			<Routes>
-				<Route path="/tourism" element={<Home/>}></Route>
-				<Route path="/activity" element={<Activity/>}></Route>
-				<Route path="/attraction" element={<Attraction/>}></Route>
+				<Route path='/tourism_react' element={<Home/>}></Route>
+				<Route path="/tourism_react/activity" element={<Activity/>}></Route>
+				<Route path="/tourism_react/attraction" element={<Attraction/>}></Route>
 			</Routes>
 		</BrowserRouter>
 	)
