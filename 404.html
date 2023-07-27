@@ -22,10 +22,8 @@
       // https://username.github.io/repo-name/one/two?a=b&c=d#qwe becomes
       // https://username.github.io/repo-name/?/one/two&a=b~and~c=d#qwe
       // Otherwise, leave pathSegmentsToKeep as 0.
-      var pathSegmentsToKeep = 0;
-      console.log('custom 404 page');
-      var l = window.location;
-      console.log('l: ', l);
+
+      // var pathSegmentsToKeep = 0;
       // l.replace(
       //   l.protocol +
       //     '/?/' +
@@ -45,6 +43,14 @@
       //     (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
       //     l.hash,
       // );
+
+
+
+      console.log('custom 404 page');
+      var l = window.location;
+      console.log('l: ', l);
+      l.replace(origin + l.pathname.split('/').splice(2, 0, '?').join('/'));
+
     </script>
   </head>
   <body></body>
