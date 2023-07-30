@@ -1,10 +1,5 @@
-
 const Attraction = () => {
-  return (
-    <div>
-      Attraction
-    </div>
-  );
-}
-    
+	return <div>Attraction</div>;
+};
+
 export default Attraction;
