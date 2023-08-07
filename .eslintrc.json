@@ -26,5 +26,9 @@
 			// It will default to "latest" and warn if missing, and to "detect" in the future
 			"version": "detect"
 		}
+	},
+	"rules": {
+		"arrow-body-style": ["error", "always"],
+		"func-style": ["error", "expression"]
 	}
 }

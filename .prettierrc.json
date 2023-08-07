@@ -1,6 +1,6 @@
 {
 	"indent": 2,
-	"printWidth": 150,
+	"printWidth": 120,
 	"tabWidth": 2,
 	"useTabs": true,
 	"semi": true,
@@ -8,5 +8,5 @@
 	"jsxSingleQuote": true,
 	"trailingComma": "all",
 	"bracketSpacing": true,
-	"bracketSameLine": true
+	"bracketSameLine": false
 }
