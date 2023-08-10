@@ -45,6 +45,7 @@ const theme = createTheme({
 				root: {
 					backgroundColor: 'white',
 					color: palette.primary.main,
+					position: 'relative',
 					display: 'flex',
 					justifyContent: 'space-between',
 					flexDirection: 'row',
