@@ -1,42 +1,37 @@
+// 以下的註解是為了使用emotion的css prop，沒放的話TS會報錯
+/** @jsxImportSource @emotion/react */
 import { FunctionComponent, PropsWithChildren } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { css } from '@emotion/react';
+import { styled } from '@mui/material/styles';
 
 import MuiAppbar from '@mui/material/AppBar';
-import Button from '@mui/material/Button';
 
 import { ReactComponent as Logo } from '../assets/logo.svg';
 import { ReactComponent as WebsiteTitle } from '../assets/Travel Taiwan.svg';
 
+const Box = styled('div')`
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+`;
+
 const Appbar: FunctionComponent<PropsWithChildren> = ({ children }) => {
-	const navigate = useNavigate();
-
 	return (
-		<MuiAppbar>
-			<div>
-				<Logo />
+		<MuiAppbar
+			css={css`
+				padding: 24px;
+			`}
+		>
+			<Box>
+				<Logo
+					css={css`
+						margin-right: 24px;
+					`}
+				/>
 				<WebsiteTitle />
-			</div>
+			</Box>
 
-			<div>
-				{children}
-				<Button
-					variant='text'
-					onClick={() => {
-						navigate('/activity');
-					}}
-				>
-					活動
-				</Button>
-
-				<Button
-					variant='text'
-					onClick={() => {
-						navigate('/attraction');
-					}}
-				>
-					景點
-				</Button>
-			</div>
+			<Box>{children}</Box>
 		</MuiAppbar>
 	);
 };
