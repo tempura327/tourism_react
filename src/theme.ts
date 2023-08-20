@@ -76,6 +76,33 @@ const theme = createTheme({
 	shape: {
 		borderRadius: 4,
 	},
+	typography: {
+		h1: {
+			fontSize: 32,
+		},
+		h2: {
+			fontSize: 28,
+		},
+		h3: {
+			fontSize: 24,
+		},
+		h4: {
+			fontSize: 20,
+		},
+		h5: {
+			fontSize: 16,
+		},
+		h6: {
+			fontSize: 12,
+		},
+		button: {
+			fontWeight: 700,
+			fontSize: 16,
+		},
+		fontWeightRegular: 400,
+		fontWeightMedium: 500,
+		fontWeightBold: 700,
+	},
 });
 
 export default theme;
